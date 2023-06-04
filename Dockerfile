@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM ubuntu:16.04
 MAINTAINER LanCache.Net Team <team@lancache.net>
 ARG DEBIAN_FRONTEND=noninteractive
 RUN \
