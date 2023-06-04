@@ -4,6 +4,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 RUN \
   apt-get -y update && apt-get -y upgrade && \
   apt-get -y install python3-pip curl wget bzip2 locales tzdata && \
+  sed -i '/en_GB.UTF-8/s/^# //g' /etc/locale.gen && locale-gen && \
   locale-gen en_GB.utf8 && \
   update-locale LANG=en_GB.utf8
 RUN \
